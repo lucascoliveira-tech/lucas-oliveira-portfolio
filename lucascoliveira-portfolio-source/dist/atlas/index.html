@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ATLAS — Architecture & Tech Lead AI System. Current delivery progress, architecture, engineering decisions and roadmap.">
+  <meta name="theme-color" content="#07111f">
+  <title>ATLAS — Architecture & Tech Lead AI System</title>
+  <link rel="canonical" href="https://lucascoliveira.com.br/atlas/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/atlas/styles.css">
+</head>
+<body class="atlas-case-page">
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Lucas Oliveira home">
+      <span class="brand-mark">LO</span>
+      <span>Lucas Oliveira</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="/#expertise">Expertise</a>
+      <a href="/#work">Work</a>
+      <a class="active" href="/atlas/">ATLAS</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#decisions">Decisions</a>
+    </nav>
+    <div class="header-links">
+      <a href="https://github.com/lucascoliveira-tech/atlas-ai-tech-lead" target="_blank" rel="noopener noreferrer">Repository</a>
+      <a class="header-cta" href="/">Portfolio <span>↗</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="atlas-hero">
+      <div class="atlas-hero-copy reveal">
+        <div class="atlas-id"><span>ATLAS / BUILD 0.2</span><span class="atlas-state"><i></i> In development</span></div>
+        <p class="eyebrow"><span></span> Architecture &amp; Tech Lead AI System</p>
+        <h1>From production signals to <em>explainable technical decisions.</em></h1>
+        <p class="atlas-intro">A human-in-the-loop engineering copilot for architecture analysis, troubleshooting and code intelligence. ATLAS turns sanitized context into traceable hypotheses, system boundaries and prioritized action plans.</p>
+        <div class="atlas-actions">
+          <a class="button button-primary" href="#architecture">Explore architecture <span>↓</span></a>
+          <a class="button button-secondary" href="#roadmap">View delivery roadmap</a>
+        </div>
+      </div>
+
+      <aside class="progress-console reveal" aria-label="ATLAS delivery progress">
+        <div class="console-head"><span>delivery.snapshot</span><span>16 SEP 2026</span></div>
+        <div class="progress-score">
+          <div class="score-ring" aria-label="38 percent complete"><strong>38</strong><span>%</span></div>
+          <div><p>3 of 8 major milestones</p><strong>Foundation validated</strong><small>Based on repository code, commits and CI results.</small></div>
+        </div>
+        <div class="progress-bar"><span style="width:38%"></span></div>
+        <ul class="evidence-list">
+          <li><i class="done"></i><span>Web command center</span><strong>CI green</strong></li>
+          <li><i class="done"></i><span>Core API foundation</span><strong>CI green</strong></li>
+          <li><i class="next"></i><span>Frontend ↔ Core integration</span><strong>Next</strong></li>
+          <li><i></i><span>Intelligence + RAG + MCP</span><strong>Planned</strong></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="atlas-principles" aria-label="ATLAS operating principles">
+      <span>HUMAN APPROVAL</span><i></i><span>READ-ONLY BY DEFAULT</span><i></i><span>EVIDENCE FIRST</span><i></i><span>AI OUTSIDE THE CORE</span>
+    </section>
+
+    <section class="atlas-section overview-section">
+      <div class="case-heading reveal">
+        <p class="section-index">01 / PRODUCT SCOPE</p>
+        <h2>A decision system for the Tech Lead workflow.</h2>
+        <p>The first release focuses on architecture interviews and production troubleshooting. It advises, cites assumptions and proposes reversible actions; it never changes production automatically.</p>
+      </div>
+      <div class="scope-grid">
+        <article class="scope-card reveal"><span>01</span><h3>Architecture</h3><p>Capture context and constraints, model boundaries and explain technology trade-offs.</p><small>SYSTEM DESIGN · ADR · RISKS</small></article>
+        <article class="scope-card reveal"><span>02</span><h3>Troubleshooting</h3><p>Correlate symptoms, telemetry and runbooks into ranked, testable hypotheses.</p><small>METRICS · LOGS · TRACES</small></article>
+        <article class="scope-card reveal"><span>03</span><h3>Code intelligence</h3><p>Inspect approved repositories to identify coupling, obsolescence and evolution opportunities.</p><small>GITHUB · QUALITY · UPGRADES</small></article>
+        <article class="scope-card reveal"><span>04</span><h3>Action planning</h3><p>Return P0–P2 recommendations with evidence, limitations and human approval gates.</p><small>RUNBOOK · PRIORITY · AUDIT</small></article>
+      </div>
+    </section>
+
+    <section id="architecture" class="atlas-section architecture-section">
+      <div class="case-heading reveal">
+        <p class="section-index">02 / SYSTEM ARCHITECTURE</p>
+        <h2>Decoupled intelligence.<br>Controlled operational access.</h2>
+        <p>The Core API owns policy, sessions and auditability. Model providers, retrieval and tools remain isolated behind the Intelligence Service.</p>
+      </div>
+
+      <div class="architecture-board reveal" role="img" aria-label="ATLAS architecture showing the Tech Lead using a React web command center connected to a Java Spring Core API, PostgreSQL, Intelligence Service, approved knowledge, model gateway, read-only MCP adapters and an observability platform.">
+        <svg class="architecture-links" viewBox="0 0 1120 700" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#4ad6ff"/></marker>
+            <marker id="arrow-muted" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#5c7892"/></marker>
+          </defs>
+          <path class="primary-path" d="M560 70 L560 150" marker-end="url(#arrow)"/>
+          <path class="primary-path" d="M560 220 L560 300" marker-end="url(#arrow)"/>
+          <path class="primary-path" d="M560 370 L560 450" marker-end="url(#arrow)"/>
+          <path class="secondary-path" d="M490 335 L245 335 L245 450" marker-end="url(#arrow-muted)"/>
+          <path class="secondary-path" d="M630 335 L875 335 L875 450" marker-end="url(#arrow-muted)"/>
+          <path class="secondary-path" d="M490 485 L245 485 L245 595" marker-end="url(#arrow-muted)"/>
+          <path class="secondary-path" d="M560 520 L560 595" marker-end="url(#arrow-muted)"/>
+          <path class="secondary-path" d="M630 485 L875 485 L875 595" marker-end="url(#arrow-muted)"/>
+        </svg>
+
+        <article class="arch-node node-user"><span class="node-type">USER</span><h3>Tech Lead</h3><p>Sanitized scenario + approval</p></article>
+        <article class="arch-node node-web complete"><span class="node-type">EXPERIENCE</span><h3>Web Command Center</h3><p>React · Vite · guided workflow</p><small>IMPLEMENTED</small></article>
+        <article class="arch-node node-core complete"><span class="node-type">CONTROL PLANE</span><h3>Core API</h3><p>Java 21 · Spring Boot · JWT · audit</p><small>FOUNDATION COMPLETE</small></article>
+        <article class="arch-node node-db"><span class="node-type">SYSTEM OF RECORD</span><h3>PostgreSQL</h3><p>Sessions · decisions · Flyway</p><small>BASELINE READY</small></article>
+        <article class="arch-node node-intelligence planned"><span class="node-type">AI BOUNDARY</span><h3>Intelligence Service</h3><p>Routing · retrieval · policy · citations</p><small>PLANNED</small></article>
+        <article class="arch-node node-platform planned"><span class="node-type">OPERATIONS</span><h3>ATLAS Platform</h3><p>Docker · OpenTelemetry · Grafana · IaC</p><small>PLANNED</small></article>
+        <article class="arch-node node-knowledge planned"><span class="node-type">GROUNDING</span><h3>Approved Knowledge</h3><p>ADRs · runbooks · post-incidents · pgvector</p></article>
+        <article class="arch-node node-model planned"><span class="node-type">PORTABLE MODELS</span><h3>Model Gateway</h3><p>Claude · OpenAI · Gemini · local</p></article>
+        <article class="arch-node node-mcp planned"><span class="node-type">READ-ONLY TOOLS</span><h3>MCP Adapters</h3><p>GitHub · Sonar · Jira · telemetry</p></article>
+      </div>
+
+      <div class="architecture-legend reveal">
+        <span><i class="legend-ready"></i> Implemented or baseline ready</span>
+        <span><i class="legend-planned"></i> Planned boundary</span>
+        <span><b>→</b> Controlled request</span>
+        <span><b class="muted-arrow">→</b> Persistence / telemetry / retrieval</span>
+      </div>
+    </section>
+
+    <section id="roadmap" class="atlas-section roadmap-section">
+      <div class="case-heading reveal">
+        <p class="section-index">03 / DELIVERY ROADMAP</p>
+        <h2>Progress backed by repository evidence.</h2>
+        <p>Eight product milestones track the path from demonstrative prototype to a production-oriented, observable and auditable engineering assistant.</p>
+      </div>
+
+      <div class="roadmap-layout">
+        <div class="milestone-list reveal">
+          <article class="milestone complete"><span>01</span><div><small>COMPLETE</small><h3>Scope, guardrails and polyrepo boundaries</h3><p>Product principles, repositories and responsibility boundaries documented.</p></div></article>
+          <article class="milestone complete"><span>02</span><div><small>COMPLETE</small><h3>Interactive Architecture Command Center</h3><p>Scenario intake, component map, recommendations and troubleshooting runbook with frontend tests and CI.</p></div></article>
+          <article class="milestone complete"><span>03</span><div><small>COMPLETE</small><h3>Core API foundation</h3><p>Java 21, Spring Boot 4.1.1, PostgreSQL/Flyway, JWT, Modulith, OpenAPI, Testcontainers and telemetry baseline.</p></div></article>
+          <article class="milestone current"><span>04</span><div><small>IN PROGRESS</small><h3>Diagnostic domain and frontend integration</h3><p>Persist real sessions and replace the demonstrative frontend diagnosis with versioned API contracts.</p></div></article>
+          <article class="milestone"><span>05</span><div><small>NEXT</small><h3>Model Gateway and structured analysis</h3><p>Provider-independent model routing, structured outputs, confidence and policy enforcement.</p></div></article>
+          <article class="milestone"><span>06</span><div><small>PLANNED</small><h3>RAG and repository intelligence</h3><p>Approved knowledge, pgvector retrieval, citations and read-only repository analysis.</p></div></article>
+          <article class="milestone"><span>07</span><div><small>PLANNED</small><h3>MCP and troubleshooting evidence</h3><p>Restricted adapters for engineering tools, logs, metrics and traces with sensitive-data controls.</p></div></article>
+          <article class="milestone"><span>08</span><div><small>PLANNED</small><h3>Observability, evaluations and hardening</h3><p>Quality evaluations, dashboards, alerts, resilience tests, security review and deployment automation.</p></div></article>
+        </div>
+
+        <aside class="repo-console reveal">
+          <div class="console-head"><span>github.evidence</span><span>LIVE SNAPSHOT</span></div>
+          <a href="https://github.com/lucascoliveira-tech/atlas-ai-tech-lead" target="_blank" rel="noopener noreferrer"><span><i class="done"></i><b>atlas-ai-tech-lead</b><small>React prototype · CI success</small></span><strong>60b74dbb ↗</strong></a>
+          <a href="https://github.com/lucascoliveira-tech/atlas-core-api" target="_blank" rel="noopener noreferrer"><span><i class="done"></i><b>atlas-core-api</b><small>Core foundation · CI success</small></span><strong>abce6845 ↗</strong></a>
+          <a href="https://github.com/lucascoliveira-tech/atlas-intelligence-service" target="_blank" rel="noopener noreferrer"><span><i></i><b>atlas-intelligence-service</b><small>Repository scaffold only</small></span><strong>PLANNED ↗</strong></a>
+          <a href="https://github.com/lucascoliveira-tech/atlas-platform" target="_blank" rel="noopener noreferrer"><span><i></i><b>atlas-platform</b><small>Repository scaffold only</small></span><strong>PLANNED ↗</strong></a>
+          <div class="repo-note"><b>Measurement rule</b><p>A milestone is complete only when its implementation, validation and repository evidence are available.</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="atlas-section decisions-grid-section">
+      <div class="case-heading reveal">
+        <p class="section-index">04 / ENGINEERING DECISIONS</p>
+        <h2>Production thinking before AI autonomy.</h2>
+      </div>
+      <div class="atlas-decision-grid">
+        <article class="reveal"><span>ADR / 01</span><h3>AI outside the transactional core</h3><p>Business requests never depend on an LLM. ATLAS is an advisory path, so model latency or failure cannot break a production transaction.</p><small>ISOLATION · AVAILABILITY · COST</small></article>
+        <article class="reveal"><span>ADR / 02</span><h3>Human approval before mutation</h3><p>Rollback, scaling, deployment and configuration changes require explicit approval and an audit trail.</p><small>SAFETY · ACCOUNTABILITY · BLAST RADIUS</small></article>
+        <article class="reveal"><span>ADR / 03</span><h3>Modules before more services</h3><p>RAG and MCP begin inside the Intelligence Service. They split only when scaling, security or release cadence provides measurable value.</p><small>BOUNDARIES · COMPLEXITY · EVOLUTION</small></article>
+      </div>
+    </section>
+
+    <section class="atlas-cta reveal">
+      <div><p class="section-index">PROJECT STATUS</p><h2>The foundation is running.<br><em>The intelligence layer is next.</em></h2></div>
+      <div><p>Follow the implementation through the public repository ecosystem. Each phase will add code, tests, architecture decisions and measurable evidence.</p><a class="button button-primary" href="https://github.com/lucascoliveira-tech/atlas-ai-tech-lead" target="_blank" rel="noopener noreferrer">Explore ATLAS on GitHub <span>↗</span></a></div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="/"><span class="brand-mark">LO</span><span>Lucas Oliveira</span></a>
+    <p><a href="/">Portfolio</a> · <a href="https://github.com/lucascoliveira-tech" target="_blank" rel="noopener noreferrer">GitHub</a> · lucascoliveira.com.br/atlas</p>
+    <p>© <span id="year"></span> Evidence over assumptions.</p>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>

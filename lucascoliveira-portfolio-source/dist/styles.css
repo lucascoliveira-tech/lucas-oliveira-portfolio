@@ -122,6 +122,9 @@ h1 em, .contact-section h2 em { color: var(--cyan); font-style: normal; }
 .project-subtitle { margin: -8px 0 15px!important; color: var(--cyan)!important; font: 400 13px var(--mono); }
 .project p { color: var(--muted); }
 .project-tech { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 25px; }
+.project-link { display: inline-flex; align-items: center; gap: 14px; margin-top: 28px; color: var(--cyan); font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+.project-link span { transition: transform .2s; }
+.project-link:hover span { transform: translateX(5px); }
 .atlas-orbit { position: absolute; top: 100px; left: 50%; width: 280px; height: 280px; transform: translateX(-50%); }
 .orbit { position: absolute; inset: 0; border: 1px solid rgba(74,214,255,.16); border-radius: 50%; }
 .o2 { inset: 35px; }.o3 { inset: 80px; border-color: rgba(171,244,61,.22); }
