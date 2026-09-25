@@ -1,0 +1,18 @@
+{
+  "updated": "2026-09-25",
+  "overallPracticeAccuracy": 90.6,
+  "courseTrack": "Intermediate 2",
+  "cefrWorkingEstimate": "B1 overall, progressing toward B2",
+  "metrics": [
+    {"label":"Modal verbs","value":93},
+    {"label":"Be able to","value":93},
+    {"label":"Modal + be able to","value":92},
+    {"label":"Likely / unlikely to","value":90},
+    {"label":"Likely/unlikely + be able to","value":91},
+    {"label":"Autonomous modal choice","value":89},
+    {"label":"Articles (a / the)","value":87},
+    {"label":"Prepositions","value":88},
+    {"label":"Vocabulary & naturalness","value":90},
+    {"label":"Sentence structure","value":93}
+  ]
+}
